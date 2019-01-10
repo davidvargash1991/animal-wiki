@@ -8,10 +8,13 @@ class Main extends Component {
 	  return(
         <div>
           <Header />
-		  <Home />
+          <Switch>
+            <Route path='/home' component={() => <Home />} />
+            <Redirect to="/home" />
+          </Switch>				  
         </div>	  
 	  );
 	}
 }
 
-export default Main;
+export default withRouter(Main);

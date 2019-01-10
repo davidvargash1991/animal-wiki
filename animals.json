@@ -70,5 +70,37 @@
       "conservationStatus":"CR",
 	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Black_Rhinos_Kenya.jpg/220px-Black_Rhinos_Kenya.jpg",
       "eol":""
-    }	
+    },
+	{
+      "id": 10,
+      "scientificName":"Phyllobates terribilis",
+      "commonName":"Golden poison frog",
+      "conservationStatus":"EN",
+	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schrecklicherpfeilgiftfrosch-01.jpg/220px-Schrecklicherpfeilgiftfrosch-01.jpg",
+      "eol":""
+    },
+	{
+      "id": 11,
+      "scientificName":"Crocodylus niloticus",
+      "commonName":"Nile crocodile",
+      "conservationStatus":"LC",
+	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Crocodylus_niloticus_in_Lake_Chamo_02.jpg/269px-Crocodylus_niloticus_in_Lake_Chamo_02.jpg",
+      "eol":""
+    },
+	{
+      "id": 12,
+      "scientificName":"Vulpes lagopus",
+      "commonName":"Artic Fox",
+      "conservationStatus":"LC",
+	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Iceland-1979445_%28cropped_3%29.jpg/220px-Iceland-1979445_%28cropped_3%29.jpg",
+      "eol":""
+    },
+	{
+      "id": 13,
+      "scientificName":"Ursus maritimus",
+      "commonName":"Polar bear",
+      "conservationStatus":"VU",
+	  "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Polar_Bear_-_Alaska_%28cropped%29.jpg/220px-Polar_Bear_-_Alaska_%28cropped%29.jpg",
+      "eol":""
+    }		
   ]

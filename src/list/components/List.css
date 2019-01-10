@@ -1,0 +1,9 @@
+.media {
+	border: #B58900 1px solid !important;
+	margin-bottom: 15px;
+}
+
+.img-div img{
+    -webkit-transform:translate(-50%);
+    margin-left:100px;
+}
