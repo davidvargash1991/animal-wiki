@@ -1,9 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
-    "home": path.resolve(__dirname, 'src/index.js'),
+    "index": path.resolve(__dirname, 'src/index.js'),
   },
+  devtool: "source-map",
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js'
@@ -39,5 +42,19 @@ module.exports = {
         use: ['style-loader','css-loader']
 	  }	  
     ]
-  }
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: false,
+          ecma: 6,
+          mangle: true
+        },
+        sourceMap: true
+      })
+    ]
+  }  
 }
