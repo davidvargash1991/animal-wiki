@@ -17,7 +17,7 @@ module.exports = (env) => {
   return {
 
     entry: {
-      "home": path.resolve(__dirname, 'src/app.js'),
+      "index": path.resolve(__dirname, 'src/index.js'),
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -36,7 +36,7 @@ module.exports = (env) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015', 'react'],
+              presets: ['es2015', 'react','stage-2'],
             }
           },
         },
