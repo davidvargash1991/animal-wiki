@@ -24,7 +24,7 @@ class Header extends Component {
 			<Navbar dark color="primary" expand="md">
 				<div className="container">
 					<NavbarToggler onClick={this.toggleNav} />
-					<NavbarBrand className="mr-auto" href="/"><span class="glyphicon glyphicon-globe"></span> Animal-Wiki</NavbarBrand>
+					<NavbarBrand className="mr-auto" href="/"><span className="glyphicon glyphicon-globe"></span> Animal-Wiki</NavbarBrand>
 					<Collapse isOpen={this.state.isNavOpen} navbar>
 					<Nav navbar>
 					  <NavItem>
@@ -32,8 +32,8 @@ class Header extends Component {
 					  </NavItem>					
 					</Nav>
 					</Collapse>
-                </div>
-            </Navbar>	
+        </div>
+      </Navbar>	
 		);
 	}
 }

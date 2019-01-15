@@ -1,0 +1,2 @@
+export const GET_ANIMALS = "GET_ANIMALS";
+export const FILTER_ANIMALS = "FILTER_ANIMALS";

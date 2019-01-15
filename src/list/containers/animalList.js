@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
-import animalData from '../../../animals.json';
 import { Row } from 'reactstrap';
-import List from '../components/list';
+import List from '../components/List';
 import Search from '../components/search';
 
 class AnimalList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			animals: animalData
+			animals: props.animals.animals
 		};
 		this.handleSearchChange = this.handleSearchChange.bind(this);
 	}
 	handleSearchChange(event) {
 		this.setState({
-			animals: event.target.value === '' ? 
-						animalData : 
+			animals: event.target.value === '' ? this.props.animals.animals : 
 						this.state.animals.filter(function(animal) {
-							return animal.commonName.toLowerCase().indexOf(event.target.value.toLowerCase()) != -1 ||
-								   animal.scientificName.toLowerCase().indexOf(event.target.value.toLowerCase()) != -1;
+							return animal.commonName.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1 ||
+								   animal.scientificName.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1;
 						})
 		});
 	}

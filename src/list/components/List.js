@@ -1,24 +1,21 @@
 import React from 'react';
 import { Media } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import './List.css';
 
 function ConservationStatus({status}) {
 	switch(status) {
 	  case 'LC':	  
 	  case 'NT':
-		return <span class="badge badge-success">{status}</span>
-		break;
+		  return <span className="badge badge-success">{status}</span>
 	  case 'VU':
-		return <span class="badge badge-primary">VU</span>
-		break;
+		  return <span className="badge badge-primary">VU</span>
 	  case 'EN':
-		return <span class="badge badge-primary">EN</span>
-		break;		
+		  return <span className="badge badge-primary">EN</span>
 	  case 'CR':
-		return <span class="badge badge-danger">CR</span>
-		break;		
+		  return <span className="badge badge-danger">CR</span>
 	  default:
-		return null;
+		  return null;
 	} 
 }
 
@@ -29,19 +26,23 @@ function List(props) {
 				props.animals.map((animal) => {
 					return (
 						<Media key={animal.id} tag="li" className="Media">
-							<Media left middle>
-								<div className="img-div">
-									<img src={animal.image} 
-									     alt={animal.commonName}
-										 height={200}
-										 width={200} />
-								</div>
-							</Media>
-							<Media body className="ml-5">
-								<Media heading><h1>{animal.commonName}</h1></Media>
-								<h2><i>{animal.scientificName}</i></h2>
-								<h3>Conservation Status: <ConservationStatus status={animal.conservationStatus} /></h3>
-							</Media>
+							  <Media left middle>
+								  <div className="img-div">
+										<Link to={`/animals/${animal.id}`}>
+									    <img src={animal.image} 
+									         alt={animal.commonName}
+										       height={200}
+										       width={200} />
+										</Link>
+								  </div>
+							  </Media>
+							  <Media body className="ml-5">
+									<Link to={`/animals/${animal.id}`}>
+								  	<h1>{animal.commonName}</h1>
+									</Link>
+								  <h2><i>{animal.scientificName}</i></h2>
+								  <h3>Conservation Status: <ConservationStatus status={animal.conservationStatus} /></h3>
+							  </Media>
 						</Media>					
 					);
 				})				

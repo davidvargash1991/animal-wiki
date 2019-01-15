@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron } from 'reactstrap';
 import AnimalList from '../list/containers/animalList';
 	
-function Home() {
+function Home(props) {
 	return(
 		<React.Fragment>
 			<Jumbotron>
@@ -15,7 +15,7 @@ function Home() {
 					</div>
 				</div>
 			</Jumbotron>
-			<AnimalList />
+			<AnimalList animals={props.animals} filterAnimals={props.filterAnimals} />
 		</React.Fragment>
 	);
 }
