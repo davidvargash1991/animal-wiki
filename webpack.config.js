@@ -1,11 +1,15 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+//const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = (env) => {
   const plugins = [
-    new ExtractTextPlugin("css/[name].[hash].css")
+    new MiniCssExtractPlugin({
+	    filename: "./css/[name].[hash].css",
+	    chunkFilename: "[id].[chunkhash].css"
+	  })
   ]
 
   if (env.NODE_ENV === 'production') {
@@ -31,14 +35,35 @@ module.exports = (env) => {
           test: /\.(js|jsx)$/,
           exclude: /(node_modules)/,
           use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['env', 'react','stage-2'],
-            }
+            loader: 'babel-loader'
           },
-        }
+        },
+		    {
+	        test: /\.css$/,
+	        use: [
+	          MiniCssExtractPlugin.loader,
+	          "css-loader"
+	        ]
+        },
+		    {
+	        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+	        use: {
+	          loader: 'url-loader',
+	          options: {
+	            limit: 1000000,
+	            fallback: 'file-loader',
+	            name: 'images/[name].[hash].[ext]',
+	          }
+	        },
+	      }                
       ]
     },
+    optimization: {
+      minimizer: [
+        //new UglifyJsPlugin(),
+        new OptimizeCSSAssetsPlugin({})
+      ]
+    },    
     plugins
   }
 }
