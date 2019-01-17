@@ -25,10 +25,9 @@ class Main extends Component {
 	render() {
 
     const Details = ({match}) => {        
-      console.log(this.props.animals);
       return(
           <AnimalDetails animal={this.props.animals.animals.filter((animal) => 
-                           animal.id === parseInt(match.params.animalId,10))[0]} />
+                                 animal.id === parseInt(match.params.animalId,10))[0]} />
       );
     };    
 

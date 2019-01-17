@@ -25,9 +25,6 @@ module.exports = (env) => {
       publicPath: path.resolve(__dirname, 'dist')+"/",
       chunkFilename: 'js/[id].js',
     },
-    devServer: {
-      port: 9000,
-    },
     module: {
       rules: [
         {
@@ -39,18 +36,7 @@ module.exports = (env) => {
               presets: ['env', 'react','stage-2'],
             }
           },
-        },
-        {
-          test: /\.(jpg|png|gif|svg)$/,
-          use: {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              fallback: 'file-loader',
-              name: 'images/[name].[hash].[ext]',
-            }
-          }
-        },
+        }
       ]
     },
     plugins

@@ -1,2 +1,5 @@
 export const GET_ANIMALS = "GET_ANIMALS";
 export const FILTER_ANIMALS = "FILTER_ANIMALS";
+export const GET_GALLERY = "GET_GALLERY";
+export const GALLERY_LOADING = "GALLERY_LOADING";
+export const GALLERY_FAILED = "GALLERY_FAILED";
