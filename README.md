@@ -1,19 +1,20 @@
 # animal-wiki
 Sample React.js animal encyclopedia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This a simple animal list with search feature, including a details page of the animal and an image gallery fetched from flickr api
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install`
+
+Installs the required packages for the app
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
 ### `npm test`
 
@@ -22,7 +23,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build:prod`
 
-Builds the app for production.
+Builds the app for production using [webpack](https://webpack.js.org/).
 
 ### `npm run eject`
 
