@@ -2,8 +2,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-//const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+ 
 module.exports = (env) => {
   const plugins = [
     new MiniCssExtractPlugin({
@@ -21,6 +21,10 @@ module.exports = (env) => {
   return {
 
     entry: {
+	  vendor: [
+		'react','react-dom','react-redux','redux-thunk','redux',
+		'redux-logger'
+	  ],
       "index": path.resolve(__dirname, 'src/index.js'),
     },
     output: {
@@ -38,29 +42,39 @@ module.exports = (env) => {
             loader: 'babel-loader'
           },
         },
-		    {
-	        test: /\.css$/,
-	        use: [
-	          MiniCssExtractPlugin.loader,
-	          "css-loader"
-	        ]
+		{
+	      test: /\.css$/,
+	      use: [
+			MiniCssExtractPlugin.loader,
+	        "css-loader"
+	      ]
         },
-		    {
-	        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-	        use: {
-	          loader: 'url-loader',
-	          options: {
-	            limit: 1000000,
-	            fallback: 'file-loader',
-	            name: 'images/[name].[hash].[ext]',
-	          }
-	        },
-	      }                
+		{
+		  test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+	      use: {
+			loader: 'url-loader',
+	        options: {
+	          limit: 1000000,
+	          fallback: 'file-loader',
+	          name: 'images/[name].[hash].[ext]',
+	        }
+	      },
+	    }                
       ]
     },
     optimization: {
+	  splitChunks: {
+		cacheGroups: {
+			vendor:{
+              chunks: 'initial',
+              name: 'vendor',
+              test: 'vendor',
+              enforce: true				
+			}
+		}  
+	  },
       minimizer: [
-        //new UglifyJsPlugin(),
+        new UglifyJsPlugin(),
         new OptimizeCSSAssetsPlugin({})
       ]
     },    
