@@ -22,7 +22,7 @@ class Main extends Component {
     this.props.fetchAnimals();
   }
 
-	render() {
+  render() {
 
     const Details = ({match}) => {        
       return(
@@ -31,7 +31,7 @@ class Main extends Component {
       );
     };    
 
-	  return(
+    return(
         <div>
           <Header />
           <Switch>
@@ -40,8 +40,8 @@ class Main extends Component {
             <Redirect to="/home" />
           </Switch>				  
         </div>	  
-	  );
-	}
+    );
+  }
 }
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Main));

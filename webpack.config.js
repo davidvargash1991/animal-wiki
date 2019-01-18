@@ -42,24 +42,24 @@ module.exports = (env) => {
             loader: 'babel-loader'
           },
         },
-		{
-	      test: /\.css$/,
-	      use: [
-			MiniCssExtractPlugin.loader,
-	        "css-loader"
-	      ]
+        {
+	  test: /\.css$/,
+	  use: [
+	    MiniCssExtractPlugin.loader,
+	    "css-loader"
+	  ]
         },
-		{
-		  test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-	      use: {
-			loader: 'url-loader',
-	        options: {
-	          limit: 1000000,
-	          fallback: 'file-loader',
-	          name: 'images/[name].[hash].[ext]',
-	        }
-	      },
-	    }                
+	{
+          test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+	  use: {
+	    loader: 'url-loader',
+	    options: {
+	      limit: 1000000,
+	      fallback: 'file-loader',
+	      name: 'images/[name].[hash].[ext]',
+	    }
+	  },
+        }                
       ]
     },
     optimization: {
