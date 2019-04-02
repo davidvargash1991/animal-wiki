@@ -1,9 +1,14 @@
 .media {
-	border: #B58900 1px solid !important;
-	margin-bottom: 15px;
+  border: #b58900 1px solid !important;
+  margin-bottom: 15px;
 }
 
-.img-div img{
-    -webkit-transform:translate(-50%);
-    margin-left:100px;
+.img-div img {
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  margin-left: 100px;
+}
+
+.center {
+  text-align: center;
 }
