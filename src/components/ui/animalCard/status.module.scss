@@ -1,0 +1,45 @@
+@import "../../../styles/styleguide.scss";
+
+.conservationStatus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .status {
+    border-radius: 50%;
+    border: 1px $gray-border solid;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    margin: 0 2px 2px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.green {
+      background-color: $green_cons_status;
+      color: $white-background;
+    }
+    &.yellow {
+      background-color: $yellow_cons_status;
+    }
+    &.orange {
+      background-color: $orange_cons_status;
+      color: $white-background;
+    }
+    &.red {
+      background-color: $red_cons_status;
+      color: $white-background;
+    }
+    &.extint {
+      background-color: $black;
+      color: $red_cons_status;
+      border: 1px $red_cons_status solid;
+    }
+    &.extintSylv {
+      background-color: $black;
+      color: $white-background;
+      border: 1px $white-background solid;
+    }
+  }
+}

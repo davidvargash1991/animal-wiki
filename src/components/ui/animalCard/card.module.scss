@@ -1,0 +1,52 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  width: 777px;
+  height: 200px;
+  border: 1px $gray-border solid;
+  border-radius: 5px;
+  margin: 10px 0;
+  -webkit-box-shadow: 9px 11px 5px -6px $box_shadow;
+  -moz-box-shadow: 9px 11px 5px -6px $box_shadow;
+  box-shadow: 9px 11px 5px -6px $box_shadow;
+  display: flex;
+
+  .imgContainer {
+    width: 200px;
+    height: 200px;
+  }
+
+  .info {
+    margin-left: 5px;
+
+    .commonName {
+      color: $primary;
+      font-size: 30px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .scientificName {
+      color: $gray-border;
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+    height: 150px;
+    padding-right: 5px;
+    .info {
+      .commonName {
+        font-size: 22px;
+      }
+      .scientificName {
+        font-size: 16px;
+        margin: 8px 0;
+      }
+    }
+  }
+}

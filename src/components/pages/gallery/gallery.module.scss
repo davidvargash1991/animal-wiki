@@ -1,0 +1,40 @@
+@import "../../../styles/styleguide.scss";
+
+.loaderContainer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .error {
+    border-radius: 5px;
+    background-color: $red_cons_status;
+    color: $white-background;
+    padding: 2px;
+  }
+}
+
+.photos {
+  width: 100%;
+  padding: 0 5px;
+  margin-top: 15px;
+
+  .photo {
+    width: 200px;
+    height: 200px;
+    border: 2px $primary solid;
+    margin: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .loaderContainer {
+    .error {
+      width: 75%;
+    }
+  }
+  .photos {
+    padding-bottom: 70px;
+  }
+}

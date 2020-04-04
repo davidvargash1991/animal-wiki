@@ -1,0 +1,44 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: $gray-background;
+  position: fixed;
+  top: 50px;
+  overflow: auto;
+  display: grid;
+
+  .content {
+    width: 1180px;
+    height: auto;
+    background-color: $white-background;
+    margin: 0 auto;
+    padding-bottom: 75px;
+
+    .data {
+      width: 800px;
+      margin: 0 auto;
+
+      h1 {
+        color: $primary;
+        font-size: 38px;
+        font-weight: 700;
+        font-family: $sen-sans;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    .content {
+      width: 100%;
+      .data {
+        width: 100%;
+        margin: 0 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: $gray-background;
+  position: fixed;
+  top: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+
+  .content {
+    width: 1180px;
+    height: auto;
+    background-color: $white-background;
+    margin: 0 auto;
+    padding-bottom: 75px;
+
+    .data {
+      width: 800px;
+      margin: 0 auto;
+
+      h1 {
+        color: $primary;
+        font-size: 38px;
+        font-weight: 700;
+        font-family: $sen-sans;
+        margin-bottom: 5px;
+      }
+
+      .scientificName {
+        color: $gray-border;
+        font-size: 18px;
+        font-style: italic;
+        width: 200px;
+        text-align: center;
+      }
+
+      .main {
+        display: flex;
+
+        .avatar {
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: 1px $primary solid;
+        }
+
+        .secondary {
+          width: 50%;
+          margin: 50px auto;
+        }
+      }
+
+      h3 {
+        color: $primary;
+        font-size: 25px;
+        font-weight: 600;
+        font-family: $sen-sans;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.property {
+  display: flex;
+  margin: 5px 0;
+
+  .title {
+    color: $black;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .value {
+    font-size: 18px;
+    margin-left: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    .content {
+      width: 100%;
+      padding: 0 25px;
+      .data {
+        width: 100%;
+        margin: 0 5px;
+      }
+    }
+  }
+}
