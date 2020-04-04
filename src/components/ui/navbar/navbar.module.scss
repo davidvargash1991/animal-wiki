@@ -17,11 +17,26 @@
     width: 1180px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
 
-    .logo {
-      height: 40px;
-      width: 40px;
-      margin-top: 5px;
+    .left {
+      display: flex;
+      .logo {
+        height: 40px;
+        width: 40px;
+        margin-top: 5px;
+      }
+    }
+
+    .back {
+      height: 36px;
+      width: 36px;
+      margin-right: 14px;
+      margin-top: 6px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -29,6 +44,7 @@
 @media only screen and (max-width: 767px) {
   .navbar {
     .content {
+      width: 100%;
       .logo {
         margin-left: 5px;
       }
