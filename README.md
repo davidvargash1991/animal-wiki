@@ -1,3 +1,10 @@
+<h1 align="center">Animal Wiki </h1>
+
+<div>
+  <img src="https://i.postimg.cc/WpJv5yPB/animal-home.png" width="300" height="300px" />
+</div>
+<img src="https://i.postimg.cc/15hZ2Kmf/animal-detail.png" width="300" height="300px" />
+
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
