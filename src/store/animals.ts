@@ -171,4 +171,24 @@ export const animals: IAnimal[] = [
     length: "100 - 225cm",
     weight: "2.75 - 6kg",
   },
+  {
+    id: 18,
+    scientificName: "Phascolarctos cinereus",
+    commonName: "Koala",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/1024px-Koala_climbing_tree.jpg",
+    length: "60 - 85cm",
+    weight: "19.2g avg",
+  },
+  {
+    id: 19,
+    scientificName: "Giraffa camelopardalis",
+    commonName: "Giraffe",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Giraffa_camelopardalis_angolensis.jpg/800px-Giraffa_camelopardalis_angolensis.jpg",
+    length: "5 - 6m",
+    weight: "828 - 1129kg",
+  },
 ];

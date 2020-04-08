@@ -31,6 +31,32 @@ class Detail extends Component<IDetailProps, IDetailState> {
   public updateWindowDimensions = () => {
     this.setState({ viewportWidth: window.innerWidth });
   };
+  private renderLength = () => {
+    const { animal } = this.state;
+    if (animal.length) {
+      return (
+        <div className={styles.property}>
+          <div className={styles.title}>Length:</div>
+          <div className={styles.value}>{animal.length}</div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
+  private renderWeight = () => {
+    const { animal } = this.state;
+    if (animal.weight) {
+      return (
+        <div className={styles.property}>
+          <div className={styles.title}>Weigth:</div>
+          <div className={styles.value}>{animal.weight}</div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
   public componentWillUnmount() {
     window.removeEventListener("resize", this.updateWindowDimensions);
   }
@@ -52,34 +78,14 @@ class Detail extends Component<IDetailProps, IDetailState> {
             <div className={styles.main}>
               <img className={styles.avatar} src={animal.image} alt="avatar" />
               <div className={styles.secondary}>
-                {animal.length && this.state.viewportWidth > 767 && (
-                  <div className={styles.property}>
-                    <div className={styles.title}>Length:</div>
-                    <div className={styles.value}>{animal.length}</div>
-                  </div>
-                )}
-                {animal.weight && this.state.viewportWidth > 767 && (
-                  <div className={styles.property}>
-                    <div className={styles.title}>Weigth:</div>
-                    <div className={styles.value}>{animal.weight}</div>
-                  </div>
-                )}
+                {this.state.viewportWidth > 767 && this.renderLength()}
+                {this.state.viewportWidth > 767 && this.renderWeight()}
               </div>
             </div>
             <p className={styles.scientificName}>{animal.scientificName}</p>
             <Status status={animal.conservationStatus} />
-            {animal.length && this.state.viewportWidth <= 767 && (
-              <div className={styles.property}>
-                <div className={styles.title}>Length:</div>
-                <div className={styles.value}>{animal.length}</div>
-              </div>
-            )}
-            {animal.weight && this.state.viewportWidth <= 767 && (
-              <div className={styles.property}>
-                <div className={styles.title}>Weigth:</div>
-                <div className={styles.value}>{animal.weight}</div>
-              </div>
-            )}
+            {this.state.viewportWidth <= 767 && this.renderLength()}
+            {this.state.viewportWidth <= 767 && this.renderWeight()}
             <h3>Gallery</h3>
             <Gallery Gallery={this.props.Gallery} />
           </div>

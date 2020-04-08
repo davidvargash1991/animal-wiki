@@ -3,21 +3,23 @@ import styles from "./image.module.scss";
 import { IAnimal } from "models/animals";
 import { Link } from "react-router-dom";
 
-interface ICardProps {
+interface IImageProps {
   animal: IAnimal;
+  small?: boolean;
+  showTooltip: boolean;
 }
 
-const Card: React.FC<ICardProps> = ({ animal }) => {
+const Image: React.FC<IImageProps> = (props) => {
   return (
-    <Link className={styles.imgContainer} to={`/animals/${animal.id}`}>
+    <Link to={`/animals/${props.animal.id}`}>
       <img
-        className={styles.img}
-        alt={animal.commonName}
-        src={animal.image}
-        title={animal.scientificName}
+        className={props.small ? styles.imgSmall : styles.img}
+        alt={props.animal.commonName}
+        src={props.animal.image}
+        title={props.showTooltip ? props.animal.scientificName : ""}
       />
     </Link>
   );
 };
 
-export default Card;
+export default Image;

@@ -2,11 +2,14 @@ import React from "react";
 import styles from "./navbar.module.scss";
 import logo from "icons/logo.svg";
 import back from "icons/back.svg";
-import Search from "../search";
+import Search from "containers/ui/search";
 import { Link } from "react-router-dom";
 import { withRouter, RouteComponentProps } from "react-router";
 
 const Navbar: React.FC<RouteComponentProps> = (props) => {
+  const handleBackClick = () => {
+    props.history.goBack();
+  };
   return (
     <nav className={styles.navbar}>
       <div className={styles.content}>
@@ -15,7 +18,9 @@ const Navbar: React.FC<RouteComponentProps> = (props) => {
             <img className={styles.logo} alt="logo" src={logo} />
           </Link>
           {props.location.pathname.includes("animals") && (
-            <Search small query={""} />
+            <div className={styles.search}>
+              <Search small query={""} showSuggestions isInsideNavbar />
+            </div>
           )}
         </div>
         {!props.location.pathname.includes("home") && (
@@ -24,7 +29,7 @@ const Navbar: React.FC<RouteComponentProps> = (props) => {
             src={back}
             alt="back"
             title="go back"
-            onClick={(e) => props.history.goBack()}
+            onClick={handleBackClick}
           />
         )}
       </div>

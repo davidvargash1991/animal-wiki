@@ -1,91 +1,126 @@
 @import "../../../styles/styleguide.scss";
 
-.container {
-  display: flex;
+.main {
+  position: relative;
 
-  .input {
-    width: 700px;
-    height: 40px;
-    padding: 8px;
-    font-size: 24px;
-    outline: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: 2px $gray-border solid;
-
-    &:focus {
-      border: 2px $primary solid;
-    }
-  }
-
-  .button {
-    outline: none;
-    height: 60px;
-    width: 60px;
-    background-color: $primary;
-    border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-}
-
-.containerSmall {
-  margin-left: 5px;
-  display: flex;
-  width: 150px;
-  align-items: center;
-
-  .input {
-    width: 150px;
-    height: 20px;
-    padding: 8px;
-    font-size: 14px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    outline: none;
-    border: 1px $gray-border solid;
-
-    &:focus {
-      border: 2px $primary solid;
-    }
-  }
-
-  .button {
-    outline: none;
-    height: 36px;
-    width: 36px;
-    background-color: $light_green;
-    border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  .container {
     display: flex;
-    justify-content: center;
+
+    .input {
+      width: 700px;
+      height: 40px;
+      padding: 8px;
+      font-size: 24px;
+      outline: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 2px $gray-border solid;
+
+      &:focus {
+        border: 2px $primary solid;
+      }
+    }
+
+    .button {
+      outline: none;
+      height: 60px;
+      width: 60px;
+      background-color: $primary;
+      border: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .containerSmall {
+    margin-left: 5px;
+    display: flex;
+    width: 300px;
     align-items: center;
 
-    &:hover {
-      cursor: pointer;
+    .input {
+      width: 250px;
+      height: 20px;
+      padding: 8px;
+      font-size: 14px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      outline: none;
+      border: 1px $gray-border solid;
+
+      &:focus {
+        border: 2px $primary solid;
+      }
     }
 
-    img {
-      width: 25px;
-      height: 25px;
+    .button {
+      outline: none;
+      height: 36px;
+      width: 36px;
+      background-color: $light_green;
+      border: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .options {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: $white-background;
+    top: 63px;
+    border: 1px $gray-border solid;
+    border-radius: 5px;
+    z-index: 10;
+
+    &.nav {
+      position: fixed;
+      width: 350px;
+      z-index: 2000;
+      top: 55px;
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
-    .input {
-      width: calc(100% - 95px);
+  .main {
+    .container {
+      .input {
+        width: calc(100% - 95px);
+      }
+    }
+    .containerSmall {
+      width: 80%;
+      .input {
+        width: calc(100% - 40px);
+      }
+    }
+    .options {
+      &.nav {
+        width: 62%;
+      }
     }
   }
 }

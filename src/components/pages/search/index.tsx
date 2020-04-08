@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./search.module.scss";
 import _ from "lodash";
-import Search from "../../ui/search";
+import Search from "containers/ui/search";
 import Card from "../../ui/animalCard";
 import { IAnimalsState } from "store/animals/reducer";
 import { withRouter, RouteComponentProps } from "react-router";
@@ -25,7 +25,7 @@ const SearchPage: React.FC<ISearchProps> = (props) => {
       <div className={styles.content}>
         <div className={styles.data}>
           <h1>Search Results</h1>
-          <Search small={false} query={query} />
+          <Search small={false} query={query} showSuggestions={false} />
           {_.map(data, (animal) => {
             return <Card key={animal.id} animal={animal} />;
           })}
