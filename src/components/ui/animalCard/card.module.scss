@@ -1,5 +1,14 @@
 @import "../../../styles/styleguide.scss";
 
+@keyframes image {
+  0% {
+    scale: (1);
+  }
+  100% {
+    scale: (1.2);
+  }
+}
+
 .container {
   width: 777px;
   height: 200px;
@@ -14,6 +23,20 @@
   .imgContainer {
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
+
+    .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 5px;
+
+      &:hover {
+        animation: image 2s forwards;
+        -webkit-animation: image 2s forwards;
+      }
+    }
   }
 
   .info {
@@ -24,6 +47,10 @@
       font-size: 30px;
       text-decoration: none;
       display: block;
+
+      &:hover {
+        color: $light_green;
+      }
     }
 
     .scientificName {

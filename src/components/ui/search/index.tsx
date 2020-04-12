@@ -4,7 +4,7 @@ import styles from "./search.module.scss";
 import cx from "classnames";
 import _ from "lodash";
 import SearchItem from "./item";
-import icon from "icons/search.svg";
+import SearchIcon from "../icons/search";
 import { IAnimalsState } from "store/animals/reducer";
 import { isMobile } from "react-device-detect";
 
@@ -101,7 +101,7 @@ class Search extends PureComponent<ISearchProps, ISearchState> {
             onChange={this.handleInputChange}
           />
           <button className={styles.button} onClick={this.hanldleButtonClick}>
-            <img src={icon} alt="search" title="search" />
+            <SearchIcon color="#ffffff" size="40" />
           </button>
         </div>
         {searchTerm && showSuggestions && (

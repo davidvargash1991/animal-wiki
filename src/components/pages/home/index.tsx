@@ -18,7 +18,7 @@ const Home: React.FC<IHomeProps> = (props) => (
       <p className={styles.text}>Sample React.js Animal encyclopedia </p>
       <div className={styles.animals}>
         {_.map(props.Animals.animals.slice(0, 5), (animal) => {
-          return <Image animal={animal} showTooltip />;
+          return <Image animal={animal} showOverlay />;
         })}
       </div>
       <Search small={false} query="" showSuggestions={!isMobile} />

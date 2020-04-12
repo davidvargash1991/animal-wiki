@@ -6,6 +6,20 @@
   border-bottom: 1px $gray-border solid;
   display: flex;
 
+  &:hover {
+    background-color: $primary;
+
+    .info {
+      .commonName {
+        color: $white-background;
+      }
+
+      .scientificName {
+        color: $white-background;
+      }
+    }
+  }
+
   .info {
     width: calc(100% - 70px);
     height: 100%;

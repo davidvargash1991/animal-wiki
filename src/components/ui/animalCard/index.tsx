@@ -12,7 +12,11 @@ interface ICardProps {
 const Card: React.FC<ICardProps> = ({ animal }) => {
   return (
     <div className={styles.container}>
-      <Image animal={animal} showTooltip={false} />
+      <div className={styles.imgContainer}>
+        <div className={styles.item}>
+          <Image animal={animal} />
+        </div>
+      </div>
       <div className={styles.info}>
         <Link className={styles.commonName} to={`/animals/${animal.id}`}>
           {animal.commonName}

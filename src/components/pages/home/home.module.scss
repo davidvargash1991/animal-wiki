@@ -41,7 +41,7 @@
     height: 50px;
     width: 160px;
     background-color: $primary;
-    border: none;
+    border: 2px solid $primary;
     border-radius: 5px;
     color: $white-background;
     font-family: $sen-sans;
@@ -52,6 +52,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      color: $primary;
+      background-color: $white-background;
+    }
   }
 }
 

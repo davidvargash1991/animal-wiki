@@ -23,20 +23,24 @@
 
     .button {
       outline: none;
-      height: 60px;
-      width: 60px;
+      height: 59px;
+      width: 59px;
       background-color: $primary;
-      border: none;
+      border: 2px solid $primary;
+      border-left: none;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
 
       &:hover {
         cursor: pointer;
-      }
+        background-color: $white-background;
+        color: $primary;
 
-      img {
-        width: 40px;
-        height: 40px;
+        svg {
+          g:nth-child(1) {
+            fill: $primary;
+          }
+        }
       }
     }
   }
@@ -76,6 +80,14 @@
 
       &:hover {
         cursor: pointer;
+        background-color: $white-background;
+        color: $light_green;
+
+        svg {
+          g:nth-child(1) {
+            fill: $light_green;
+          }
+        }
       }
 
       img {

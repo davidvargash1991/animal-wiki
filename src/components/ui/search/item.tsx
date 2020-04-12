@@ -10,7 +10,7 @@ interface ISearchItemProps {
 
 const SearchItem: React.FC<ISearchItemProps> = ({ animal }) => (
   <div className={styles.container}>
-    <Image animal={animal} small showTooltip={false} />
+    <Image animal={animal} small />
     <Link to={`/animals/${animal.id}`} className={styles.info}>
       <div className={styles.commonName}>{animal.commonName}</div>
       <p className={styles.scientificName}>{animal.scientificName}</p>

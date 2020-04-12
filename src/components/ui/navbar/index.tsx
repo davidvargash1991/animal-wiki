@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./navbar.module.scss";
 import logo from "icons/logo.svg";
-import back from "icons/back.svg";
+import Back from "../icons/back";
 import Search from "containers/ui/search";
 import { Link } from "react-router-dom";
 import { withRouter, RouteComponentProps } from "react-router";
@@ -24,13 +24,9 @@ const Navbar: React.FC<RouteComponentProps> = (props) => {
           )}
         </div>
         {!props.location.pathname.includes("home") && (
-          <img
-            className={styles.back}
-            src={back}
-            alt="back"
-            title="go back"
-            onClick={handleBackClick}
-          />
+          <div className={styles.back} onClick={handleBackClick}>
+            <Back color="#ffffff" size="32" />
+          </div>
         )}
       </div>
     </nav>
