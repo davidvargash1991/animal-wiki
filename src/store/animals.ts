@@ -191,4 +191,64 @@ export const animals: IAnimal[] = [
     length: "5 - 6m",
     weight: "828 - 1129kg",
   },
+  {
+    id: 20,
+    scientificName: "Salmo salar",
+    commonName: "Atlantic salmon",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Salmo_salar-Atlantic_Salmon-Atlanterhavsparken_Norway.JPG/1280px-Salmo_salar-Atlantic_Salmon-Atlanterhavsparken_Norway.JPG",
+    length: "71 - 76cm",
+    weight: "3.6 - 5.4kg",
+  },
+  {
+    id: 21,
+    scientificName: "Loxodonta africana",
+    commonName: "African elephant",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg/800px-African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg",
+    length: "2.60 - 3.96m",
+    weight: "3 - 6 ton",
+  },
+  {
+    id: 22,
+    scientificName: "Erinaceus europaeus",
+    commonName: "European hedgehog",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg/1280px-Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg",
+    length: "130 - 300mm",
+    weight: "1kg avg",
+  },
+  {
+    id: 23,
+    scientificName: "Pteronura brasiliensis",
+    commonName: "Giant otter",
+    conservationStatus: "EN",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Giant_otter_2.JPG/800px-Giant_otter_2.JPG",
+    length: "1 - 1.7m",
+    weight: "22 -32kg",
+  },
+  {
+    id: 24,
+    scientificName: "Martes martes",
+    commonName: "European pine marten",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Baummarder_01.jpg/1920px-Baummarder_01.jpg",
+    length: "53cm avg",
+    weight: "1.5 - 1.7kg",
+  },
+  {
+    id: 25,
+    scientificName: "Hydrochoerus hydrochaeris",
+    commonName: "Capybara",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Capivara%28Hydrochoerus_hydrochaeris%29.jpg/1280px-Capivara%28Hydrochoerus_hydrochaeris%29.jpg",
+    length: "106 -134cm",
+    weight: "35 -66kg",
+  },
 ];
