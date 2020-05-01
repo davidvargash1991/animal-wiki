@@ -251,4 +251,43 @@ export const animals: IAnimal[] = [
     length: "106 -134cm",
     weight: "35 -66kg",
   },
+  {
+    id: 26,
+    scientificName: "Hippopotamus amphibius",
+    commonName: "Hippopotamus",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Hipop%C3%B3tamo_%28Hippopotamus_amphibius%29%2C_parque_nacional_de_Chobe%2C_Botsuana%2C_2018-07-28%2C_DD_82.jpg/1280px-Hipop%C3%B3tamo_%28Hippopotamus_amphibius%29%2C_parque_nacional_de_Chobe%2C_Botsuana%2C_2018-07-28%2C_DD_82.jpg",
+    length: "2.7m avg",
+    weight: "1300 -4500kg",
+  },
+  {
+    id: 27,
+    scientificName: "Macropus rufus",
+    commonName: "Red kangaroo",
+    conservationStatus: "LC",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5d/RedRoo.JPG",
+    length: "1 -1.6m",
+    weight: "25 -90kg",
+  },
+  {
+    id: 28,
+    scientificName: "Lepus Articus",
+    commonName: "Artic hare",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Polarhase_1_1997-08-04.jpg/1280px-Polarhase_1_1997-08-04.jpg",
+    length: "43 - 66cm",
+    weight: "3 - 7kg",
+  },
+  {
+    id: 29,
+    scientificName: "Felis viverrinus",
+    commonName: "Fishing cat",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Prionailurus_viverrinus_at_Cincinnati_Zoo.JPG/1280px-Prionailurus_viverrinus_at_Cincinnati_Zoo.JPG",
+    length: "75 - 86cm",
+    weight: "8 - 14kg",
+  },
 ];

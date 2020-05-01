@@ -29,6 +29,7 @@ const Home: React.FC<IHomeProps> = (props) => {
           See all animals
         </Link>
       </div>
+      <div className={styles.createdBy}>Created by David Vargas</div>
     </div>
   );
 };

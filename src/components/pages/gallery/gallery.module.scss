@@ -17,8 +17,8 @@
 
 .photos {
   width: 100%;
-  padding: 0 5px;
-  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
   .photo {
     width: 200px;
@@ -36,5 +36,6 @@
   }
   .photos {
     padding-bottom: 70px;
+    grid-template-columns: 1fr;
   }
 }
