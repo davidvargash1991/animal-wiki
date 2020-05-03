@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./lightbox.module.scss";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
+import "react-awesome-slider/dist/custom-animations/open-animation.css";
 
 interface ILightboxProps {
   images: string[];
@@ -19,7 +20,7 @@ const Lightbox: React.FC<ILightboxProps> = ({
       <div className={styles.close} onClick={onClose}>
         X
       </div>
-      <AwesomeSlider selected={selectedIndex}>
+      <AwesomeSlider selected={selectedIndex} animation="openAnimation ">
         {images.map((img, idx) => {
           return <div key={idx} data-src={img} />;
         })}

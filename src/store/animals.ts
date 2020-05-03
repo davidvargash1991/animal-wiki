@@ -340,4 +340,34 @@ export const animals: IAnimal[] = [
     length: "",
     weight: "",
   },
+  {
+    id: 35,
+    scientificName: "Vombatus ursinus",
+    commonName: "Common wombat",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/6/6e/Vombatus_ursinus_%28Wombat_in_snow%29.jpg",
+    length: "70 - 120cm",
+    weight: "25 - 40kg",
+  },
+  {
+    id: 35,
+    scientificName: "Talpa europaea",
+    commonName: "European mole",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Talpa_europaea_MHNT.jpg/1920px-Talpa_europaea_MHNT.jpg",
+    length: "10 - 15cm",
+    weight: "",
+  },
+  {
+    id: 36,
+    scientificName: "Sarcophilus harrisii",
+    commonName: "Tasmanian devil",
+    conservationStatus: "EN",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sarcophilus_harrisii_taranna.jpg/1280px-Sarcophilus_harrisii_taranna.jpg",
+    length: "",
+    weight: "6 - 8kg",
+  },
 ];
