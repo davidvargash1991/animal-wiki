@@ -14,8 +14,13 @@
   .awssld__content > img,
   .awssld__content > video {
     object-fit: fill !important;
-    width: 80% !important;
-    left: 9% !important;
+    width: auto !important;
+    position: relative !important;
+    height: auto !important;
+    max-height: 600px;
+  }
+  .awssld__content {
+    align-items: unset !important;
   }
 }
 

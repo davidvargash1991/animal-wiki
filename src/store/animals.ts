@@ -351,7 +351,7 @@ export const animals: IAnimal[] = [
     weight: "25 - 40kg",
   },
   {
-    id: 35,
+    id: 36,
     scientificName: "Talpa europaea",
     commonName: "European mole",
     conservationStatus: "LC",
@@ -361,7 +361,7 @@ export const animals: IAnimal[] = [
     weight: "",
   },
   {
-    id: 36,
+    id: 37,
     scientificName: "Sarcophilus harrisii",
     commonName: "Tasmanian devil",
     conservationStatus: "EN",
@@ -369,5 +369,15 @@ export const animals: IAnimal[] = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sarcophilus_harrisii_taranna.jpg/1280px-Sarcophilus_harrisii_taranna.jpg",
     length: "",
     weight: "6 - 8kg",
+  },
+  {
+    id: 38,
+    scientificName: "Naja naja",
+    commonName: "Indian cobra",
+    conservationStatus: "",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cobra.jpg/800px-Cobra.jpg",
+    length: "1 - 2.2m",
+    weight: "",
   },
 ];
