@@ -290,4 +290,24 @@ export const animals: IAnimal[] = [
     length: "75 - 86cm",
     weight: "8 - 14kg",
   },
+  {
+    id: 30,
+    scientificName: "Aptenodytes forsteri",
+    commonName: "Emperor penguin",
+    conservationStatus: "NT",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+    length: "1.1m",
+    weight: "37kg",
+  },
+  {
+    id: 31,
+    scientificName: "Macrodontia cervicornis",
+    commonName: " Sabertooth Longhorn beetle",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Cerambycidae_-_Macrodontia_cervicornis.JPG/1280px-Cerambycidae_-_Macrodontia_cervicornis.JPG",
+    length: "17.5cm",
+    weight: "",
+  },
 ];
