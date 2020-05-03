@@ -303,11 +303,41 @@ export const animals: IAnimal[] = [
   {
     id: 31,
     scientificName: "Macrodontia cervicornis",
-    commonName: " Sabertooth Longhorn beetle",
+    commonName: "Sabertooth Longhorn beetle",
     conservationStatus: "VU",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Cerambycidae_-_Macrodontia_cervicornis.JPG/1280px-Cerambycidae_-_Macrodontia_cervicornis.JPG",
     length: "17.5cm",
+    weight: "",
+  },
+  {
+    id: 32,
+    scientificName: "Bufo marinus",
+    commonName: "Cane Toad",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Canetoadfemale.jpg/1280px-Canetoadfemale.jpg",
+    length: "5 - 23cm",
+    weight: "2kg avg",
+  },
+  {
+    id: 33,
+    scientificName: "Mantis religiosa",
+    commonName: "European mantis",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Mantid_August_2007-2.jpg/1280px-Mantid_August_2007-2.jpg",
+    length: "6 - 7cm",
+    weight: "",
+  },
+  {
+    id: 34,
+    scientificName: "Bufoceratias wedli",
+    commonName: "anglerfish",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bufoceratias.jpg",
+    length: "",
     weight: "",
   },
 ];

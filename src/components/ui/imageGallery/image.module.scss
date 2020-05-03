@@ -1,0 +1,33 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  position: relative;
+
+  &.loaded {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .photo {
+    width: 200px;
+    height: 200px;
+    border: 2px $primary solid;
+    margin: 2px;
+    background-color: black;
+  }
+
+  .loaderContainer {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    .loaderContainer {
+      left: 20%;
+    }
+  }
+}
