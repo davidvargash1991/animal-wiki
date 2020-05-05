@@ -9,17 +9,22 @@
   overflow-y: auto;
   overflow-x: hidden;
   display: grid;
+  justify-content: center;
 
   .content {
-    width: 1180px;
+    width: 100%;
+    max-width: 1180px;
     height: auto;
     background-color: $white-background;
-    margin: 0 auto;
-    padding-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    position: relative;
 
     .data {
-      width: 800px;
-      margin: 0 auto;
+      max-width: 800px;
+      padding: 0 15px;
+      height: 100%;
+      position: relative;
 
       h1 {
         color: $primary;
@@ -65,30 +70,13 @@
 }
 
 .property {
-  display: flex;
-  margin: 5px 0;
+  color: $black;
+  font-weight: 700;
+  font-size: 18px;
 
-  .title {
-    color: $black;
-    font-weight: 700;
-    font-size: 18px;
-  }
-
-  .value {
-    font-size: 18px;
-    margin-left: 2px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .container {
-    .content {
-      width: 100%;
-      padding: 0 25px;
-      .data {
-        width: 100%;
-        margin: 0 5px;
-      }
-    }
+  &::after {
+    content: ":";
+    display: inline-block;
+    margin-right: 5px;
   }
 }

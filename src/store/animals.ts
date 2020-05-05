@@ -380,4 +380,24 @@ export const animals: IAnimal[] = [
     length: "1 - 2.2m",
     weight: "",
   },
+  {
+    id: 39,
+    scientificName: "Dasypus novemcinctus",
+    commonName: "Nine-banded armadillo",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/77/Dasypus_novemcinctus.jpg",
+    length: "35 - 57cm",
+    weight: "2.5 - 6.5kg",
+  },
+  {
+    id: 40,
+    scientificName: "Manis pentadactyla",
+    commonName: "Chinese pangolin",
+    conservationStatus: "CR",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Pangolin%27s_tail.jpg/800px-Pangolin%27s_tail.jpg",
+    length: "54 - 80cm",
+    weight: "2 - 7kg",
+  },
 ];

@@ -35,10 +35,10 @@ class Detail extends Component<IDetailProps, IDetailState> {
     const { animal } = this.state;
     if (animal.length) {
       return (
-        <div className={styles.property}>
-          <div className={styles.title}>Length:</div>
-          <div className={styles.value}>{animal.length}</div>
-        </div>
+        <p>
+          <span className={styles.property}>Length</span>
+          <span className={styles.value}>{animal.length}</span>
+        </p>
       );
     } else {
       return null;
@@ -48,10 +48,10 @@ class Detail extends Component<IDetailProps, IDetailState> {
     const { animal } = this.state;
     if (animal.weight) {
       return (
-        <div className={styles.property}>
-          <div className={styles.title}>Weigth:</div>
-          <div className={styles.value}>{animal.weight}</div>
-        </div>
+        <p>
+          <span className={styles.property}>Weigth</span>
+          <span>{animal.weight}</span>
+        </p>
       );
     } else {
       return null;

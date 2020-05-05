@@ -18,14 +18,9 @@
 .photos {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  .photo {
-    width: 200px;
-    height: 200px;
-    border: 2px $primary solid;
-    margin: 2px;
-  }
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  grid-auto-rows: minmax(100px, 200px);
+  gap: 5px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -34,8 +29,8 @@
       width: 75%;
     }
   }
+
   .photos {
-    padding-bottom: 70px;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(100px, 200px));
   }
 }
