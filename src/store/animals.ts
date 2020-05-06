@@ -400,4 +400,14 @@ export const animals: IAnimal[] = [
     length: "54 - 80cm",
     weight: "2 - 7kg",
   },
+  {
+    id: 41,
+    scientificName: "Cynomys ludovicianus",
+    commonName: "Black-tailed prairie dog",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Black-tailed_Prairie_Dog-Wichita_Mountain_Wildlife_Refuge-1.jpg/800px-Black-tailed_Prairie_Dog-Wichita_Mountain_Wildlife_Refuge-1.jpg",
+    length: "28 -30cm",
+    weight: "0.7 - 1.5kg",
+  },
 ];
