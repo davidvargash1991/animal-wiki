@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import styles from "./detail.module.scss";
 import Gallery from "../gallery";
+import Share from "components/ui/icons/share";
 import Status from "components/ui/animalCard/status";
 import { IPhotosState } from "store/photos/reducer";
 import { IAnimalsState } from "store/animals/reducer";
 import { IAnimal } from "models/animals";
+import { browserhasShareApi, share } from "utils/shareApi";
 
 interface IDetailProps {
   animalId: number;
@@ -28,6 +30,9 @@ class Detail extends Component<IDetailProps, IDetailState> {
       viewportWidth: window.innerWidth,
     };
   }
+  private handleShareClick = () => {
+    share(this.state.animal.commonName);
+  };
   public updateWindowDimensions = () => {
     this.setState({ viewportWidth: window.innerWidth });
   };
@@ -70,11 +75,19 @@ class Detail extends Component<IDetailProps, IDetailState> {
   }
   public render() {
     const { animal } = this.state;
+
     return (
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.data}>
-            <h1>{animal.commonName}</h1>
+            <h1>
+              {animal.commonName}
+              {browserhasShareApi && (
+                <span onClick={this.handleShareClick}>
+                  <Share color="#3a9e2c" size={"36"} />
+                </span>
+              )}
+            </h1>
             <div className={styles.main}>
               <img className={styles.avatar} src={animal.image} alt="avatar" />
               <div className={styles.secondary}>

@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  perspective: 200px;
 
   &.loaded {
     &:hover {
@@ -16,6 +17,10 @@
     vertical-align: top;
     border: 2px $primary solid;
     background-color: black;
+
+    &:hover {
+      transform: translateZ(3px);
+    }
   }
 
   .loaderContainer {

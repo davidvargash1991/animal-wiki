@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 200px));
   grid-auto-rows: minmax(100px, 200px);
-  gap: 5px;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 767px) {

@@ -410,4 +410,24 @@ export const animals: IAnimal[] = [
     length: "28 -30cm",
     weight: "0.7 - 1.5kg",
   },
+  {
+    id: 42,
+    scientificName: "Sciurus carolinensis",
+    commonName: "Eastern gray squirel",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Eastern_Grey_Squirrel_in_St_James%27s_Park%2C_London_-_Nov_2006_edit.jpg/1280px-Eastern_Grey_Squirrel_in_St_James%27s_Park%2C_London_-_Nov_2006_edit.jpg",
+    length: "23 - 28cm",
+    weight: "300 - 700g",
+  },
+  {
+    id: 43,
+    scientificName: "Orcinus orca",
+    commonName: "Killer whale",
+    conservationStatus: "",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e5/JumpingOrca.jpg",
+    length: "9m avg",
+    weight: "10 ton avg",
+  },
 ];
