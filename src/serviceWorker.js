@@ -12,6 +12,12 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 // App Shell
 workbox.routing.registerNavigationRoute("/index.html");
 
+workbox.routing.registerRoute(
+  /^https?:\/\/api.flickr.com\/services\/.*/,
+  workbox.strategies.staleWhileRevalidate(),
+  "GET"
+);
+
 // Last fuentes van con Cache First y vencen al mes
 workbox.routing.registerRoute(
   /^https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/,
