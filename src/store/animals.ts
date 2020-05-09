@@ -430,4 +430,14 @@ export const animals: IAnimal[] = [
     length: "9m avg",
     weight: "10 ton avg",
   },
+  {
+    id: 44,
+    scientificName: "Odobenus rosmarus",
+    commonName: "Walrus",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/9/97/12_Walross_2001.jpg",
+    length: "3 - 3.6m",
+    weight: "1.2 - 2ton",
+  },
 ];

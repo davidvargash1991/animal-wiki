@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { store } from "./store/index";
+import registerServiceWorker from "./registerServiceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,3 +17,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+registerServiceWorker();
