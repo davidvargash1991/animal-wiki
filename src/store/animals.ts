@@ -427,8 +427,8 @@ export const animals: IAnimal[] = [
     conservationStatus: "",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/e/e5/JumpingOrca.jpg",
-    length: "9m avg",
-    weight: "10 ton avg",
+    length: "9m max",
+    weight: "10 ton max",
   },
   {
     id: 44,
@@ -439,5 +439,15 @@ export const animals: IAnimal[] = [
       "https://upload.wikimedia.org/wikipedia/commons/9/97/12_Walross_2001.jpg",
     length: "3 - 3.6m",
     weight: "1.2 - 2ton",
+  },
+  {
+    id: 45,
+    scientificName: "Babyrousa babyrussa",
+    commonName: "Babirusa",
+    conservationStatus: "VU",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Babirusa%2C_Singapore_Zoo_2.JPG/1280px-Babirusa%2C_Singapore_Zoo_2.JPG",
+    length: "0.9 - 1.1m",
+    weight: "max 100 kg",
   },
 ];
