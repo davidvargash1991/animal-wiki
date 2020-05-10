@@ -5,6 +5,11 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 // App Shell
 workbox.routing.registerNavigationRoute("/index.html");
 
+workbox.routing.registerNavigationRoute(
+  "/src/store/animals.ts",
+  workbox.strategies.networkFirst()
+);
+
 workbox.routing.registerRoute(
   /^https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/,
   workbox.strategies.cacheFirst({
