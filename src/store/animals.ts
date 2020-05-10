@@ -490,4 +490,14 @@ export const animals: IAnimal[] = [
     length: "15 - 18cm",
     weight: "",
   },
+  {
+    id: 50,
+    scientificName: "Draco spilonotus",
+    commonName: "Flying dragon",
+    conservationStatus: "",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Draco_spilonotus.JPG/330px-Draco_spilonotus.JPG",
+    length: "15 - 20cm",
+    weight: "",
+  },
 ];
