@@ -5,9 +5,10 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 // App Shell
 workbox.routing.registerNavigationRoute("/index.html");
 
-workbox.routing.registerNavigationRoute(
+workbox.routing.registerRoute(
   "/src/store/animals.ts",
-  workbox.strategies.networkFirst()
+  workbox.strategies.networkFirst(),
+  "GET"
 );
 
 workbox.routing.registerRoute(
