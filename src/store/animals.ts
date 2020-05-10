@@ -470,4 +470,14 @@ export const animals: IAnimal[] = [
     length: "0.9 - 2.1m",
     weight: "96 - 130kg",
   },
+  {
+    id: 48,
+    scientificName: "Chlamydosaurus kingii",
+    commonName: "Chlamydosaurus",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Frill-necked_Lizard_%28Chlamydosaurus_kingii%29_%288692622586%29.jpg/1280px-Frill-necked_Lizard_%28Chlamydosaurus_kingii%29_%288692622586%29.jpg",
+    length: "60 - 70cm",
+    weight: "",
+  },
 ];
