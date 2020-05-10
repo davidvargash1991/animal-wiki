@@ -450,4 +450,24 @@ export const animals: IAnimal[] = [
     length: "0.9 - 1.1m",
     weight: "max 100 kg",
   },
+  {
+    id: 46,
+    scientificName: "Camelus dromedarius",
+    commonName: "Dromedary",
+    conservationStatus: "",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Camelus_dromedarius_on_Sinai.jpg/1280px-Camelus_dromedarius_on_Sinai.jpg",
+    length: "2.2 - 3.4m",
+    weight: "450 - 550kg",
+  },
+  {
+    id: 46,
+    scientificName: "Lama glama",
+    commonName: "Llama",
+    conservationStatus: "",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Llama_lying_down.jpg/1280px-Llama_lying_down.jpg",
+    length: "0.9 - 2.1m",
+    weight: "96 - 130kg",
+  },
 ];
