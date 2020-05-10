@@ -6,13 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .error {
-    border-radius: 5px;
-    background-color: $red_cons_status;
-    color: $white-background;
-    padding: 2px;
-  }
 }
 
 .photos {
@@ -24,12 +17,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .loaderContainer {
-    .error {
-      width: 75%;
-    }
-  }
-
   .photos {
     grid-template-columns: repeat(2, minmax(100px, 200px));
   }

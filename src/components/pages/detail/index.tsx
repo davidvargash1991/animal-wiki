@@ -3,7 +3,6 @@ import styles from "./detail.module.scss";
 import Gallery from "../gallery";
 import Share from "components/ui/icons/share";
 import Status from "components/ui/animalCard/status";
-import offline from "icons/offline.png";
 import { IPhotosState } from "store/photos/reducer";
 import { IAnimalsState } from "store/animals/reducer";
 import { IAnimal } from "models/animals";
@@ -72,6 +71,9 @@ class Detail extends Component<IDetailProps, IDetailState> {
 
   private goOnline = () => {
     this.setState({ isOnline: true });
+    if (this.props.Gallery.errMess) {
+      this.props.onGetPhotos(this.state.animal.scientificName);
+    }
   };
 
   private goOffline = () => {
@@ -118,24 +120,8 @@ class Detail extends Component<IDetailProps, IDetailState> {
             <Status status={animal.conservationStatus} />
             {this.state.viewportWidth <= 767 && this.renderLength()}
             {this.state.viewportWidth <= 767 && this.renderWeight()}
-            {isOnline ? (
-              <React.Fragment>
-                <h3>Gallery</h3>
-                <Gallery Gallery={this.props.Gallery} />
-              </React.Fragment>
-            ) : (
-              <div className={styles.offline}>
-                <img
-                  className={styles.offlineIcon}
-                  src={offline}
-                  alt="offline"
-                />
-                <p className={styles.offlineText}>
-                  It looks like you don't have a connection to the internet,
-                  Please check your connection
-                </p>
-              </div>
-            )}
+            <h3>Gallery</h3>
+            <Gallery Gallery={this.props.Gallery} isOnline={isOnline} />
           </div>
         </div>
       </div>

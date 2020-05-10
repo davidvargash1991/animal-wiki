@@ -500,4 +500,24 @@ export const animals: IAnimal[] = [
     length: "15 - 20cm",
     weight: "",
   },
+  {
+    id: 51,
+    scientificName: "Furcifer pardalis",
+    commonName: "Panther chameleon",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b8/Panther_Chameleon_%28Furcifer_pardalis%29.jpg",
+    length: "40 - 52cm",
+    weight: "",
+  },
+  {
+    id: 52,
+    scientificName: "Heloderma suspectum",
+    commonName: "Gila monster",
+    conservationStatus: "NT",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Gila_monster2.JPG/1280px-Gila_monster2.JPG",
+    length: "35 - 50cm",
+    weight: "",
+  },
 ];

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./gallery.module.scss";
 import _ from "lodash";
+import Error from "./error";
 import Loader from "components/ui/loader";
 import Lightbox from "components/ui/lightbox";
 import { IPhotosState } from "store/photos/reducer";
@@ -8,6 +9,7 @@ import Image from "components/ui/imageGallery";
 
 interface IGalleryProps {
   Gallery: IPhotosState;
+  isOnline: boolean;
 }
 
 const Gallery: React.FC<IGalleryProps> = (props) => {
@@ -28,11 +30,7 @@ const Gallery: React.FC<IGalleryProps> = (props) => {
       </div>
     );
   } else if (props.Gallery.errMess) {
-    return (
-      <div className={styles.loaderContainer}>
-        <div className={styles.error}>{props.Gallery.errMess}</div>
-      </div>
-    );
+    return <Error isOnline={props.isOnline} errMess={props.Gallery.errMess} />;
   } else if (imgIndex > -1) {
     return (
       <Lightbox

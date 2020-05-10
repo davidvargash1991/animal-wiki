@@ -1,0 +1,42 @@
+@import "../../../../styles/styleguide.scss";
+
+.offline {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.offlineIcon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  left: 40%;
+}
+
+.offlineText {
+  font-size: 16px;
+  text-align: center;
+}
+
+.loaderContainer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .error {
+    border-radius: 5px;
+    background-color: $red_cons_status;
+    color: $white-background;
+    padding: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .loaderContainer {
+    .error {
+      width: 75%;
+    }
+  }
+}
