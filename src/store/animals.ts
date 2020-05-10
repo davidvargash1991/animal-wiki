@@ -480,4 +480,14 @@ export const animals: IAnimal[] = [
     length: "60 - 70cm",
     weight: "",
   },
+  {
+    id: 49,
+    scientificName: "Moloch horridus",
+    commonName: "Thorny devil",
+    conservationStatus: "LC",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/72/Thornydevil.jpg",
+    length: "15 - 18cm",
+    weight: "",
+  },
 ];
