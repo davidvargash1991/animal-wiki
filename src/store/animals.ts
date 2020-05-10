@@ -461,7 +461,7 @@ export const animals: IAnimal[] = [
     weight: "450 - 550kg",
   },
   {
-    id: 46,
+    id: 47,
     scientificName: "Lama glama",
     commonName: "Llama",
     conservationStatus: "",
